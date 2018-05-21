@@ -5,6 +5,7 @@ public class Hello {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("hello");
+		System.out.println("안녕, 세계.");
 		String myname="";
 		int myage=0;
 		
@@ -14,6 +15,8 @@ public class Hello {
 		myage=math2.age;
 		
 		System.out.println("나의 이름은: "+myname+"이고, 나의 나이는: "+myage);
+	
+		
 	}
 
 }
