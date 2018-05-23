@@ -14,6 +14,8 @@ public class Hello {
 		myname=math2.name;
 		myage=math2.age;
 		
+		
+		
 		System.out.println("나의 이름은: "+myname+"이고, 나의 나이는: "+myage);
 		System.out.println("재미있는 GitHub 로딩 & 다운로딩 연습중 !");
 		System.out.println("Home PC transfort");

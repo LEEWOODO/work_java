@@ -1,0 +1,24 @@
+package ch02;
+
+public class VarEx3 {
+	final static int MAX_SPEED=10; // MAX_SPEED는 상수, 10은 리터럴
+	final static int 밑변=10;
+	final static int 높이=3;
+	
+	/*
+	 * final이 붙으면 앞으로 MAX_SPEED는 
+	 * 프로그램이 종료될 때 까지 10으로 고정
+	 */
+	//
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// int speed=MAX_SPEED+50;
+		System.out.println(MAX_SPEED); // 상수 MAX_SPEED 값을 출력
+		
+		int triangleArea=밑변*높이/2;
+		System.out.println("삼각형의 넓이는: "+triangleArea);
+		
+	}
+
+}
