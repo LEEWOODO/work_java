@@ -13,8 +13,10 @@ public class Practice {
 		int length=0;
 		while (check==1) {
 			length=0;
+			// Scanner 객체를 이용해서 두자리의 숫자를 입력받는다.
 			System.out.print("2자리 정수를 입력하세요. >> ");
-			inputNum=scanner.nextInt();
+			inputNum=scanner.nextInt();		// 입력받은 문자열을 정수(int)로 받아 전달. 간혹 nextInt는 오류를 많이 발생시키기 때문에
+											// nextLine을 써서 Integer.parseInt()를 사용한다.
 			length=checkDigits(inputNum);
 			if(length>2) {
 				break;
@@ -25,6 +27,8 @@ public class Practice {
 			System.out.printf("입력한 %d는 10진수로 %d 입니다. \n",inputNum,inputNum);
 			System.out.printf("입력한 %d는 8진수로 %o 입니다. \n",inputNum,inputNum);
 			System.out.printf("입력한 %d는 16진수로 %#X 입니다. \n",inputNum,inputNum);
+			
+			
 			System.out.println("Enter the Number>> Continue : 1	,	Exit : 0");
 			check=scanner.nextInt();
 			if(check==0) {
