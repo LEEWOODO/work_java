@@ -16,7 +16,7 @@ public class Practice {
 			System.out.print("2자리 정수를 입력하세요. >> ");
 			inputNum=scanner.nextInt();
 			length=checkDigits(inputNum);
-			if(length==3) {
+			if(length>2) {
 				break;
 			}
 			System.out.println("입력하신 숫자는 : "+ inputNum+" 입니다");
@@ -32,7 +32,8 @@ public class Practice {
 			}else if (check==1) {
 				continue;
 			}else {
-				System.out.println("0과 1만 입력할 수 있습니다.");
+				System.out.println("0과 1만 입력할 수 있습니다. 다시 시작하세요.");
+			
 			}
 			
 		}
@@ -43,23 +44,25 @@ public class Practice {
 	
 		
 	}
+
 	public static int checkDigits(int inputNum) {
 		int a=0;
 		a=inputNum;
 		int length=0;
-		while (true) {
-			
-			a=a%10;
-			length++;
-			System.out.println();
-			System.out.printf("a : "+a);	System.out.printf( "   length : "+length);
+		while (a!=0) {
 		
-			System.out.println();
-			if(length>2) {
-				break;
-			}
+			a=a/10;
+		
+			length++;
+		
+//			System.out.println();
+//			System.out.printf("a : "+a);	System.out.printf( "   length : "+length);
+//		
+//			System.out.println();
+			
 		}
 		return length;
 	}
+	
 
 }
