@@ -14,9 +14,9 @@ public class Ch02Ex02_04 {
 		num1=Integer.parseInt(scanner.nextLine());
 		num2=Integer.parseInt(scanner.nextLine());
 		result=num1-num2;
-		System.out.printf("%d - %d = %d",num1,num2,result);
-	
+		System.out.printf("%d - %d = %d %n",num1,num2,result);
 		
+	
 	}
 
 }
