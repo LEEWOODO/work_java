@@ -20,6 +20,16 @@ public class CastingEx5 {
 		 * 작은 타입에서는 큰 타입으로 형변환이 가능.
 		 * 큰 타입에서 작은 타입으로 형변환 할 시 정보 손실
 		 */
+		//System.out.println(true+false);
+		byte bb=10;
+		char ch2='A';
+		int i2=100;
+		long l2=1000L;
+		
+		i2=ch2;
+		System.out.println("i2: "+i2);
+		
+	
 	}
 
 }
