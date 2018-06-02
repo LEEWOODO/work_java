@@ -24,7 +24,11 @@ public class Ch03Ex02_04 {
 		System.out.print("기영 몸무게를 입력하여주세요.>> ");
 		kWeight = Integer.parseInt(scanner.nextLine());
 		
-		System.out.printf("%b%n",mHeight>kHeight && mWeight>kWeight); 
+		// 삼항 연산자 두번 쓰기
+		boolean isGreatestMinsoo=mHeight>kHeight?
+				(mWeight>kWeight?true:false):false;
+				
+		System.out.printf("%b%n",isGreatestMinsoo); 
 		
 	}
 

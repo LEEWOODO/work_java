@@ -11,7 +11,7 @@ public class Exercise3_10 {
 		// 소문자= 대문자+32
 		
 		char lowerCase= (char) ((int)ch>=65&&(int)ch<90? (int)ch+32: (int)ch);
-		System.out.println((int)lowerCase);
+
 		System.out.println("ch: "+ch);
 		System.out.println("ch to lowerCase: "+lowerCase);
 	}
