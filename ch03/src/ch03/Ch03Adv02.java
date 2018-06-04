@@ -23,7 +23,8 @@ public class Ch03Adv02 {
 		// 2. 세개 이상의 수 --\NO
 		최대공약수=goFindMax(num1,num2,최대공약수);
 		System.out.println("최대공약수 : "+최대공약수);
-		System.out.println("최소공배수는 : "+goFindMin(num1,num2,최대공약수));
+		최소공배수=goFindMin(num1,num2,최대공약수);
+		System.out.println("최소공배수는 : "+최소공배수);
 		
 				
 /*
@@ -44,29 +45,7 @@ public class Ch03Adv02 {
 		}
 		System.out.println();
 */
-		
-		
-		
-		
-/*		
-		// 1. 두개의 수의 최대 공약수 구하기  OK
-		// 2. 세개 이상의 수 --\NO
-		while (m > 0) {
-			//
-	
-			m = 1;
 
-			m = num1 % num2;
-			num1 = num2;
-			num2 = m;
-
-		}
-
-				*/
-
-     
-
-	
 	}
 
 	private static int goFindMin(int num1, int num2, int 최대공약수) {

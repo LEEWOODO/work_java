@@ -12,9 +12,13 @@ public class Exercise3_9 {
 //		char ch2=57;
 //		
 //		System.out.println(ch2);
+
 		boolean b=( (48<=(int)ch && (int)ch<=57) || (65<=(int)ch && (int)ch<=90) || (97<=(int)ch && (int)ch<=122) );
+		
+		boolean bb=('a'<=ch&&ch<='z')||('A'<=ch&&ch<='Z')||('0'<=ch&&ch<='9');
 		System.out.println(b);
-	//	System.out.println(b);
+		System.out.println(bb);
+
 	}
 
 }

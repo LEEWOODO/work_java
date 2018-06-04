@@ -11,13 +11,13 @@ public class Exercise3_8 {
 		char ch='A';
 		ch=(char) (ch+2);
 		
-		float f=(float) (3.0/2);
+		float f= 3/2f;
 		long l =3000 * 3000*3000L;
 		
 		float f2=0.1f;
 		double d=0.1f;
 		
-		boolean result= d==f2;
+		boolean result= (float)d==f2;  // 비교연산자 이전에 형변환이 먼저 일어나고 계산이 된다.
 		
 		System.out.println("c= "+c);
 		System.out.println("ch= "+ch);
