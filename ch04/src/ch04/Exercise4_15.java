@@ -11,13 +11,15 @@ public class Exercise4_15 {
 		String str="";
 		while (tmp!=0) {
 			
-			result=tmp%10; // 5 4 3 2 1
-			str+=result+"";
+			//result=tmp%10; // 5 4 3 2 1
+			//str+=result+"";
+			
+			result = result*10 + tmp % 10; 
 			
 			tmp/=10;
 			
 		}
-		result=Integer.parseInt(str);
+	//	result=Integer.parseInt(str);
 		
 		if(number==result) {
 			System.out.println(number+ "는 회문수 입니다.");
