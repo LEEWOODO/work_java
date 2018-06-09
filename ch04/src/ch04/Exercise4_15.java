@@ -11,11 +11,13 @@ public class Exercise4_15 {
 		String str="";
 		while (tmp!=0) {
 			
-			//result=tmp%10; // 5 4 3 2 1
-			//str+=result+"";
-			
+			// result에 10을 곱하여 일의 자리 수를 저장할 공간을 확보한 후
+			// tmp에 남아있는 일의 자리수를 끄집어내어 result에 저장
+			// 반복하다 보면 거꾸로 저장된다.
 			result = result*10 + tmp % 10; 
 			
+			
+			// tmp=12321  1232   123   12   1
 			tmp/=10;
 			
 		}
