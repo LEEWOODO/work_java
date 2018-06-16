@@ -1,4 +1,4 @@
-package ch04;
+                      package ch04;
 
 import java.util.Scanner;
 
@@ -13,9 +13,9 @@ public class Ch04Ex02_13 {
 		int col=Integer.parseInt(scanner.nextLine());
 		int num=1;
 		for(int i=1;i<=row;i++) {
-			num=i;
+			//num=i;
 			for(int j=1;j<=col;j++) {
-				System.out.printf("%d ",num*j);
+				System.out.printf("%d ",i*j);
 				
 			}
 			System.out.println();

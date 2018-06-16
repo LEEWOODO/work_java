@@ -29,6 +29,24 @@ public class Ch04Ex02_17 {
 	
 			System.out.println();
 		}
+		
+		
+		/*
+		 * 강사님 코드 */
+		num2=1;
+		for(int i=0;i<num;i++) {
+			for(int j=0;j<num;j++) {
+				if(i<=j) {
+					System.out.printf("%d\t",(num2%10));
+					num2++;
+				}else {
+					System.out.printf("\t");
+				}
+				
+			}
+			System.out.println();
+		}
+		
 	}
 
 }

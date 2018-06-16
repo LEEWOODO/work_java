@@ -9,7 +9,11 @@ public class Ch04Ex01_07 {
 		System.out.print("영문 대문자를 입력하여 주세요:> ");
 		Scanner scanner = new Scanner(System.in);
 		char ch = scanner.nextLine().charAt(0);
-
+		/*
+		 * String을 문자로 바꾸기
+		 * char ch=
+		 */
+		
 		switch (ch) {
 		case 'A':
 			System.out.println("Excellent");

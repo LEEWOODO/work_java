@@ -10,7 +10,7 @@ public class Ch04Ex01_04 {
 		Scanner scanner=new Scanner(System.in);
 		double weight=scanner.nextDouble();
 		String weightName="";
-		if(weight<=88.45) {
+/*		if(weight<=88.45) {
 			weightName="Cruiserweight";
 			if(weight<=72.57) {
 				weightName="Middleweight";
@@ -22,6 +22,21 @@ public class Ch04Ex01_04 {
 				}
 			}
 		}else {
+			weightName="Heavyweight";
+		}*/
+		if(weight<=50.80) {
+			weightName="Flyweight";
+		}
+		else if(weight<=61.23) {
+			weightName="Lightweight";
+		}
+		else if(weight<=72.57) {
+			weightName="Lightweight";
+		}
+		else if (weight<=88.45) {
+			weightName="Cruiserweight";
+		}
+		else {
 			weightName="Heavyweight";
 		}
 		

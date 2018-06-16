@@ -20,7 +20,7 @@ public class Ch04Ex01_13 {
 			System.out.println("Chicken");
 			break;
 		default:
-			System.out.println("I DON'T NO]");
+			System.out.println("I DON'T NO");
 			break;
 		}
 	}

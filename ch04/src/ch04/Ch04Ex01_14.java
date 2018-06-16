@@ -12,7 +12,7 @@ public class Ch04Ex01_14 {
 		int num=scanner.nextInt();
 		int day=0;
 		switch (num) {
-		case 1:case 3: case 5:	case 7:	case 8:	case 10:	case 12:
+		case 1:case 3: case 5:	case 7:	case 8:	case 10:case 12:
 			day=31;
 			break;
 		case 2:
