@@ -1,5 +1,6 @@
 package ch03;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ch03Adv02 {
@@ -9,64 +10,79 @@ public class Ch03Adv02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
-	
-		int num1=0;
-		int num2=0;
-		int temp=1;
-		 int 최대공약수=0;
-		 int 최소공배수=0;
-		System.out.print("두개의 수를 입력하시오: ");
-		num1= scanner.nextInt();
-		num2= scanner.nextInt();
+		int inputNumber=0;
+		int[] arrayNum;
+		int a;
+		int b;
+		int c;
+		int GCD = 0;/// 두개수a,b의 최대공약수// 세개의수 최대공약수 d,c
+		int LCM=0; // 최소공배수
+		// gcd 최대공약수를 뜻
+		System.out.print("몇개의 수에 대해서 최대공약수, 최소공배수를 구하시겠습니까? ");
+		inputNumber=2;
+		
+		arrayNum=new int[inputNumber];
+		
+		String[] str=scanner.nextLine().split(" ");
+		for(int i=0;i<str.length;i++) {
+			arrayNum[i]=Integer.parseInt(str[i]);
+		}
+		
+		/* 유클리드 호제법으로 구하기
+		 *  두 정수 a와 b에 대하여 예를 들어봅시다. f(18, 12)의 경우 18 mod 12 = 6이므로,
+		 *  f(18, 12) = f(12, 6)이 성립합니다. 이 때 12 mod 6 = 0이 성립하므로 
+		 *  f(18, 12) = f(12, 6) = gcd(12, 6) = 6 이 성립합니다
+		 */
+		if(inputNumber==2) {
+		// 최대공약수 구하기
+		
+			a= arrayNum[0];
+			b= arrayNum[1];
+			goGCD(a,b);// 최대공약수
+			goLCM(a,b);// 최소공배수
 			
-		// 1. 두개의 수의 최대 공약수 구하기  OK
-		// 2. 세개 이상의 수 --\NO
-		최대공약수=goFindMax(num1,num2,최대공약수);
-		System.out.println("최대공약수 : "+최대공약수);
-		최소공배수=goFindMin(num1,num2,최대공약수);
-		System.out.println("최소공배수는 : "+최소공배수);
 		
-				
-/*
-		// 입력 수들 중에서 내림차순으로 정렬 시킨다.
-		for (int i = 0; i < n; i++) {
-			for (int j = i + 1; j < n; j++) {
-				if (arrayInt[i] < arrayInt[j]) {
-					int temp = 0;
-					temp = arrayInt[j];
-					arrayInt[j] = arrayInt[i];
-					arrayInt[i] = temp;
-				}
+		}else if (inputNumber>2 && inputNumber<=10) {
+			
+		}else {
+			System.out.println();
+		}
+		
+		
+	}
+
+	private static void goLCM(int a, int b) {
+		// TODO Auto-generated method stub
+		/*
+		 * 최소공배수 구하기
+		 * 두 정수가 가지는 배수 중 가장 작은 값
+		 */
+		int[] arrayA=new int[a/2+2];
+		int j=0;
+		for(int i=1;i<=a;i++) {
+			// a의 약수들을 저장하는 배열
+			if(a%i==0) {
+				arrayA[j]=i;
 			}
+			j++;
 		}
-		System.out.println("정렬 시킨 배열");
-		for (int i = 0; i < n; i++) {
-			System.out.print(arrayInt[i] + " ");
-		}
-		System.out.println();
-*/
-
+		System.out.println(Arrays.toString(arrayA));
+		// b의 약수들
 	}
 
-	private static int goFindMin(int num1, int num2, int 최대공약수) {
+	private static void goGCD(int a, int b) {
 		// TODO Auto-generated method stub
-		// 두수의 곱에서 최대공약수 나누면 최소공배수다
-		int 최소공배수 = (num1*num2)/최대공약수;
-		return 최소공배수;
+		int mod=a%b;
+		int GCD=0;	// 최대공약수
+		while (mod>0) {
+			a=b;
+			b=mod;
+			GCD=b;
+			mod=a%b;
+			
+		}
+		System.out.println("최대공약수는: "+GCD);
 	}
 
-	private static int goFindMax(int num1, int num2,int 최대공약수) {
-		int temp=1;
-		
-		// TODO Auto-generated method stub
-		while (temp > 0) {
-			//
-			temp = num1 % num2;
-			num1 = num2;
-			num2 = temp;
-		}
-		최대공약수=num1;
-		return 최대공약수;
-	}
 
 }

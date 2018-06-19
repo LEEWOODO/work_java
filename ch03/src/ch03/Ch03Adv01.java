@@ -30,12 +30,14 @@ public class Ch03Adv01 {
 				System.out.println("프로그램을 종료합니다. ^^");
 				break;
 			}
+			// 범위 내의 값
 			if ((Integer.parseInt(str[0]) <= 1000 && Integer.parseInt(str[0]) >= 0)
 					&& (Integer.parseInt(str[1]) <= 4000 && Integer.parseInt(str[1]) >= 0)) {
-
+				
 				int dog_cnt = Integer.parseInt(str[0]);
-				int chicken_cnt = 0;
 				int leg = Integer.parseInt(str[1]);
+				int chicken_cnt = 0;
+			
 				while ((dog_cnt * 4) + (chicken_cnt * 2) != leg) {
 					dog_cnt--;
 					chicken_cnt++;
@@ -44,11 +46,13 @@ public class Ch03Adv01 {
 				if (dog_cnt < 0 || chicken_cnt < 0) {
 					System.out.println("0(구할 수 없음)");
 				} else {
-					System.out.print("개새끼 수 :" + dog_cnt + " ");
-					System.out.println("닭 전 수 :" + chicken_cnt);
+					System.out.print("개 :" + dog_cnt + " ");
+					System.out.println("병아리 :" + chicken_cnt);
 				}
 
-			} else {
+			}
+			// 범위 이외의 값 error
+			else {
 				System.out.println("INPUT ERROR.");
 
 			}
