@@ -25,10 +25,10 @@ public class Ch05Ex01_09 {
 					num[j]=temp;
 				}
 			}
-			System.out.println(Arrays.toString(num));
+			//System.out.println(Arrays.toString(num));
 			
 		}
-	
+		System.out.println(Arrays.toString(num));
 		
 	}
 

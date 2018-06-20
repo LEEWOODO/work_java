@@ -6,45 +6,36 @@ public class Ch05Ex01_10 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scanner=new Scanner(System.in);
-		char alpha=' ';
-		char[] alphabets=new char[50];
-		int i=0;
-		
+
+		// 0. 대문자의 개수를 저장할 배열 선언
+		int[] counter = new int[26];
+
+		// 4. 무한반복
 		while (true) {
-			alpha=scanner.nextLine().charAt(0);
-			// A와 Z사이의 알파뱃이 입력되지않으면 break;
-			if(alpha<'A' || alpha>'Z') {
+			// 1. 한줄에 하나씩 입력받기
+			Scanner scanner = new Scanner(System.in);
+			char ch = scanner.nextLine().charAt(0);
+
+			// 2. 1번에서 입력받은 문자를 검사하여 개수 세기
+			if ('A' <= ch && ch <= 'Z') {
+				counter[ch - 'A']++;
+			} 
+			
+			// 5. 반복문을 빠져나갈 조건문 작성
+			else {
 				break;
 			}
-			alphabets[i]=alpha;
-			
-			
-			i++;
-			
+
 		}
-		char startAlpha='A';
-		int j=0;
+
 	
-		
-		// 이쪽 다시
-		while (startAlpha>='A'&&startAlpha<='Z') {
-			int count=0;
-			for(j=0;j<=i;j++) {
-				if(startAlpha==alphabets[j]) {
-					count++;
-				}
+		// 3. 대문자 개수를 저장한 배열 출력하기.
+		for (int i = 0; i < counter.length; i++) {
+			if (counter[i] != 0) {
+				System.out.printf("%c : %d%n", i + 'A', counter[i]);
 			}
-			
-		
-			
-			startAlpha++;
-			
 		}
-		
-		
-		
-		
+
 	}
 
 }
