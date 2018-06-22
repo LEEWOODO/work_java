@@ -15,7 +15,7 @@ public class Ch05Ex02_06 {
 		for(int i=0;i<ch.length;i++) {
 			if(input==ch[i]) {
 				check=true;
-				System.out.println(i);
+				System.out.print(i+" ");
 			}
 		}
 		if(check==false) {

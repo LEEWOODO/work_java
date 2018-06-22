@@ -9,9 +9,17 @@ public class Ch05Ex02_07 {
 		// TODO Auto-generated method stub
 		Scanner scanner=new Scanner(System.in);
 		int count=0;
-		int[] numbers=new int[100];
+		int[] numbers=new int[2];
+		int j=0;
 		while (true) {
 			int input=Integer.parseInt(scanner.nextLine());
+			
+			if(j==numbers.length) {
+				int[] tmp=new int[numbers.length*2];
+				System.arraycopy(numbers, 0, tmp, 0, numbers.length);
+				numbers=tmp;
+			}
+			
 			if(input==999) {
 				break;
 			}
@@ -19,6 +27,7 @@ public class Ch05Ex02_07 {
 				numbers[count]=input;
 				count++;
 			}
+			j++;
 		}
 	//	System.out.println(Arrays.toString(numbers));
 		

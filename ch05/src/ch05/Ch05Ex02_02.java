@@ -15,6 +15,8 @@ public class Ch05Ex02_02 {
 		sum=Integer.parseInt(numbers[0])+Integer.parseInt(numbers[2])+Integer.parseInt(numbers[4]);
 		
 		System.out.println(sum);
+		
+	
 	}
 
 }

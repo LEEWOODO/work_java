@@ -6,22 +6,29 @@ public class Ch05Ex02_09 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] num=new int[100];
+		int[] num=new int[2];
 		Scanner scanner=new Scanner(System.in);
 		int inputNum=0;
 		int count=0;
 		
 		while (true) {
 			inputNum=Integer.parseInt(scanner.nextLine());
+			if(num.length==count) {
+				int[] tmp=new int[num.length*2];
+				System.arraycopy(num, 0, tmp, 0, num.length);
+				num=tmp;
+			}
+			
+			
 			if(inputNum==0) {
 				break;
 			}else {
 				num[count]=inputNum;
 				count++;
 			}
-			
-		}
 		
+		}
+		System.out.println(count);
 		// 짝 홀수 구분
 		
 		for(int i=0;i<count;i++) {

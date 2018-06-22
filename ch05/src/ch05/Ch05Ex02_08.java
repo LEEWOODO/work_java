@@ -6,7 +6,7 @@ public class Ch05Ex02_08 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] num=new int[100];
+		int[] num=new int[2];
 		Scanner scanner=new Scanner(System.in);
 		int inputNum=0;
 		int multiplesOfFive=0;
@@ -15,6 +15,13 @@ public class Ch05Ex02_08 {
 		
 		while (true) {
 			inputNum=Integer.parseInt(scanner.nextLine());
+			
+			if(i==num.length) {
+				int[] tmp=new int[num.length*2];
+				System.arraycopy(num, 0, tmp, 0, num.length);
+				num=tmp;
+			}
+			
 			if(inputNum==0) {
 				break;
 			}else {
