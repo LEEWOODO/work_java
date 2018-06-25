@@ -21,7 +21,7 @@ public class Ch05Ex02_15 {
 			classes[i][3]=sum;
 		}
 		for(int i=0;i<classes.length;i++) {
-			System.out.printf("%d classes : %d%n ",i+1,classes[i][3]);
+			System.out.printf("%d classes : %d%n",i+1,classes[i][3]);
 		}
 	
 	}

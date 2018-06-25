@@ -1,12 +1,13 @@
 package ch05;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ch05Ex02_12 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] counter=new int[11];
+		int[] counter=new int[10];
 		Scanner scanner=new Scanner(System.in);
 		
 		while (true) {
@@ -20,7 +21,7 @@ public class Ch05Ex02_12 {
 					continue;
 				}
 				int tmp=score/10; // tmp는 몫
-				counter[tmp]+=1;	// tmp로 고치자
+				counter[tmp-1]+=1;	// tmp로 고치자
 			}
 		}
 		for(int i=counter.length-1;i>=0;i--) {
@@ -29,6 +30,7 @@ public class Ch05Ex02_12 {
 			}
 		
 		}
+	//	System.out.println(Arrays.toString(counter));
 		
 	}
 

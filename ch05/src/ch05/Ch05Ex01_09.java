@@ -10,26 +10,32 @@ public class Ch05Ex01_09 {
 		Scanner scanner = new Scanner(System.in);
 		String[] input = scanner.nextLine().split(" ");
 		int[] num = new int[input.length];
-		int temp=0;
+
 		
 		for (int i = 0; i < input.length; i++) {
 			num[i] = Integer.parseInt(input[i]);
 		}
 		// 내림차순 정렬
-		temp=num[0];
-		for(int i=0;i<num.length;i++) {
-			for(int j=0;j<num.length;j++) {
-				if(num[i]>num[j]) {
-					temp=num[i];
-					num[i]=num[j];
-					num[j]=temp;
+	
+		
+		for(int i=0;i<num.length-1;i++) {
+			boolean changed=false;
+			for(int j=0;j<num.length-1-i;j++) {
+				if(num[j]>num[j+1]) {
+					int temp=num[j];
+					num[j]=num[j+1];
+					num[j+1]=temp;
+					changed = true;
 				}
 			}
-			//System.out.println(Arrays.toString(num));
-			
+			if(!changed)break; 
 		}
-		System.out.println(Arrays.toString(num));
+
 		
+	
+		for(int i=num.length-1;i>=0;i--) {
+			System.out.print(num[i]+" ");
+		}
 	}
 
 }
